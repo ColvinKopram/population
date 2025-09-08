@@ -11,7 +11,7 @@ st.set_page_config(
 )
 alt.themes.enable("dark")
 
-df = pd.read_csv('/workspaces/population/Data/nst-est2019-alldata.csv')
+df = pd.read_csv('Data/nst-est2019-alldata.csv')
 
 with st.sidebar:
     st.title('🏛️Population Visualization')
