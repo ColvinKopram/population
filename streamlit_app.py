@@ -60,6 +60,8 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
     )
     return choropleth
 
+st.plotly_chart(make_choropleth(df_selected_year,input_id='states_code',input_column='population',input_color_theme=selected_color_theme))
+
 def calculate_population_difference(input_df, input_year):
   selected_year_data = input_df[input_df['year'] == input_year].reset_index()
   previous_year_data = input_df[input_df['year'] == input_year - 1].reset_index()
