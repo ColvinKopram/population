@@ -42,7 +42,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     # height=300
     return heatmap
 
-st.altair_chart(make_heatmap(df_selected_year, input_y = 'year', input_x= 'states_code', input_color='population',input_color_theme=selected_color_theme),use_container_width=True)
+st.altair_chart(make_heatmap(df, input_y = 'year', input_x= 'states_code', input_color='population',input_color_theme=selected_color_theme),use_container_width=True)
 
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
     choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="USA-states",
